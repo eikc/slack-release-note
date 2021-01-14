@@ -1,0 +1,16 @@
+name: 'slack-release-note'
+description: 'sends a release note a slack channel based on your PR title and description'
+author: 'Eik Emil Christensen'
+runs:
+  using: node12
+  main: 'dist/index.js'
+inputs:
+  github-token:
+    description: The github token
+    required: true
+  slack_token:
+    description: Slack token
+    required: true
+  slack_channel:
+    description: the slack channel to write in
+    required: true
